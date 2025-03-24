@@ -1,0 +1,254 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --dark-bg: #121212;
+    --light-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(18, 18, 18, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    padding: 0 5%;
+    background: linear-gradient(135deg, var(--dark-bg), var(--light-bg));
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.primary-button, .secondary-button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Features Section */
+.features-grid {
+    padding: 5rem 5%;
+    background-color: var(--light-bg);
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Carbon Calculator */
+.calculator-section {
+    padding: 5rem 5%;
+    background-color: var(--dark-bg);
+}
+
+.calculator-container {
+    display: flex;
+    gap: 50px;
+}
+
+.calculator-inputs, .calculator-results {
+    flex: 1;
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 5rem 5%;
+    background-color: var(--light-bg);
+}
+
+.mission-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.value-card {
+    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    margin: 0 15px;
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 5%;
+    background-color: var(--dark-bg);
+}
+
+.newsletter-signup {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#newsletter-form {
+    display: flex;
+    margin-top: 30px;
+}
+
+#newsletter-form input {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: var(--light-bg);
+    border: none;
+    color: var(--text-color);
+}
+
+#newsletter-form button {
+    padding: 15px 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-bg);
+    padding: 3rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .features-container, .mission-values, .calculator-container {
+        grid-template-columns: 1fr;
+    }
+}

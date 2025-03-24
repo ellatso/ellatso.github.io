@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Wallet - Sustainable Living Reimagined</title>
+    <link rel="stylesheet" href="carbonwallet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="logo">
+            <img src="/api/placeholder/50/50" alt="Carbon Wallet Logo">
+            <span>Carbon Wallet</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#mission">Our Mission</a>
+            <a href="#contact" class="cta-button">Join Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your <span class="highlight">Carbon Footprint</span></h1>
+            <p>Earn rewards, track impact, and make sustainability personal</p>
+            <div class="hero-buttons">
+                <button class="primary-button">Get Started</button>
+                <button class="secondary-button">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="carbon-tracker-mock">
+                <div class="mock-screen">
+                    <div class="carbon-stats">
+                        <div class="stat">
+                            <i class="fas fa-leaf"></i>
+                            <span id="carbon-saved">0</span>
+                            <p>kg CO2 Saved</p>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-tree"></i>
+                            <span id="trees-equivalent">0</span>
+                            <p>Trees Preserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features-grid">
+        <div class="section-header">
+            <h2>How Carbon Wallet Works</h2>
+            <p>Innovative solutions for sustainable living</p>
+        </div>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Real-Time Tracking</h3>
+                <p>Monitor your carbon footprint with precision and ease</p>
+                <div class="feature-hover">
+                    <p>Our advanced algorithms analyze your daily activities to provide accurate carbon impact measurements.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gift"></i>
+                <h3>Reward System</h3>
+                <p>Earn points for eco-friendly actions</p>
+                <div class="feature-hover">
+                    <p>Every sustainable choice earns you points redeemable for discounts, gifts, and exclusive experiences.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Supply Chain Transparency</h3>
+                <p>Understand the true impact of your purchases</p>
+                <div class="feature-hover">
+                    <p>Blockchain technology provides end-to-end visibility of product lifecycles and environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Carbon Calculator -->
+    <section id="carbon-calculator" class="calculator-section">
+        <div class="section-header">
+            <h2>Your Personal Carbon Calculator</h2>
+            <p>Understand and reduce your environmental impact</p>
+        </div>
+        <div class="calculator-container">
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label>Daily Transportation</label>
+                    <select id="transport-type">
+                        <option>Car</option>
+                        <option>Public Transit</option>
+                        <option>Bicycle</option>
+                        <option>Walking</option>
+                    </select>
+                    <input type="number" id="transport-distance" placeholder="Distance (km)">
+                </div>
+                <div class="input-group">
+                    <label>Energy Consumption</label>
+                    <input type="number" id="electricity-usage" placeholder="Monthly kWh">
+                </div>
+                <div class="input-group">
+                    <label>Diet</label>
+                    <select id="diet-type">
+                        <option>Meat-heavy</option>
+                        <option>Balanced</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                    </select>
+                </div>
+                <button id="calculate-carbon" class="primary-button">Calculate My Impact</button>
+            </div>
+            <div class="calculator-results">
+                <h3>Your Monthly Carbon Footprint</h3>
+                <div class="result-display">
+                    <span id="carbon-result">0</span> kg CO2
+                </div>
+                <div class="carbon-breakdown">
+                    <div class="breakdown-item">
+                        <span>Transportation</span>
+                        <span id="transport-carbon">0</span> kg
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Energy</span>
+                        <span id="energy-carbon">0</span> kg
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Diet</span>
+                        <span id="diet-carbon">0</span> kg
+                    </div>
+                </div>
+                <div class="reduction-tips">
+                    <h4>Reduction Tips</h4>
+                    <ul id="carbon-tips">
+                        <!-- Tips dynamically inserted -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section">
+        <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>We believe technology can transform how we approach sustainability. Carbon Wallet isn't just an app—it's a movement towards a more conscious, responsible way of living.</p>
+            <div class="mission-values">
+                <div class="value-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Impact</h3>
+                    <p>Creating systemic change through individual actions</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Empowerment</h3>
+                    <p>Connecting individuals who care about our planet</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Technological Innovation</h3>
+                    <p>Leveraging cutting-edge tech for environmental solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Newsletter -->
+    <section id="contact" class="contact-section">
+        <div class="newsletter-signup">
+            <h2>Stay Updated</h2>
+            <p>Join our mission to create a sustainable future</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="primary-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/api/placeholder/50/50" alt="Carbon Wallet Logo">
+                <span>Carbon Wallet</span>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#mission">Our Mission</a>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
