@@ -1,0 +1,52 @@
+system:
+  name: "智慧交通AI控制系統"
+  version: "1.0.0"
+  environment: "demo"
+
+sumo:
+  gui: false
+  step_length: 0.5
+  # 預設 demo 檔名（由 scripts/make_demo_routes.py 產生）
+  net_file: "data/networks/demo_grid.net.xml"
+  route_file: "data/routes/demo_grid.rou.xml"
+  sumocfg_file: "data/networks/demo_grid.sumocfg"
+  simulation_time: 600
+
+ai_models:
+  green_wave:
+    cruise_speed: 13.9          # m/s (~50 km/h)
+    offset_smoothing: 0.3       # EWMA 權重
+  pedestrian:
+    base_crossing_time: 25
+    elderly_extra_time: 8
+    max_crossing_time: 60
+  bus_coordination:
+    target_headway: 180
+    max_holding_time: 30
+    punctuality_window: 120
+  emergency:
+    detection_range: 500
+    clearance_lead_time: 30
+    priority_duration: 45
+
+safety:
+  min_green: 7
+  max_red: 120
+  min_walk_speed: 1.2           # m/s
+  crosswalk_length: 12          # m （Demo 用常數；實務可查地圖）
+
+web_interface:
+  host: "127.0.0.1"
+  port: 5000
+  debug: true
+
+scenarios:
+  morning_rush:
+    traffic_multiplier: 1.6
+    pedestrian_multiplier: 1.4
+  emergency_event:
+    emergency_vehicle_spawn_rate: 0.1
+    traffic_multiplier: 1.2
+  bus_bunching:
+    bus_spawn_rate: 0.3
+    bunching_probability: 0.7
