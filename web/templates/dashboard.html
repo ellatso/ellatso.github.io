@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Traffic – Rule-based Demo</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <div class="toolbar">
+    <h1>Smart Traffic – Mode A</h1>
+    <div id="status">connecting…</div>
+  </div>
+  <div class="kpis">
+    <div class="card"><div class="label">Avg Speed</div><div id="k_speed" class="value">–</div></div>
+    <div class="card"><div class="label">Queue</div><div id="k_queue" class="value">–</div></div>
+  </div>
+  <div id="chart" style="width:100%;height:380px;"></div>
+  <pre id="lastDecision" class="panel"></pre>
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
